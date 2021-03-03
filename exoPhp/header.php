@@ -1,5 +1,7 @@
 <?php
 // le but est de renvoyer la bonne balise html à afficher
+
+// fonction nav_item
 function nav_item(string $link,string $name):string{
   $class='nav-link';
   if($_SERVER['SCRIPT_NAME']==$link){
