@@ -97,7 +97,7 @@ HTML;
 	<form action="<?php $url?>" method="GET">
 		<h2>Vos parfums !</h2>
 		<?php foreach ($parfums as $parfum => $prix):?>
-			<div class="checkbox">
+			<div class="form-control">
 				<label>
 					<?=checkbox("parfum",$parfum,$_GET)?>
 					<?php echo $parfum?> - <?php echo $prix?> $
@@ -106,24 +106,28 @@ HTML;
 		<?php endforeach?>
 
 		<h2>Votre cornet !</h2>
-		<?php foreach ($cornets as $cornet => $prix):?>
-			<div class="checkbox">
-				<label>
-					<?=radio("cornet",$cornet,$_GET)?>
-					<?php echo $cornet?> - <?php echo $prix?> $
-				</label>
-			</div>
-		<?php endforeach?>
+		<div class="form-group">
+			<?php foreach ($cornets as $cornet => $prix):?>
+				<div class="form-control">
+					<label>
+						<?=radio("cornet",$cornet,$_GET)?>
+						<?php echo $cornet?> - <?php echo $prix?> $
+					</label>
+				</div>
+			<?php endforeach?>
+		</div>
 
 		<h2>Vos supplements !</h2>
-		<?php foreach ($supplements as $supplement => $prix):?>
-			<div class="checkbox">
-				<label>
-					<?=checkbox("supplement",$supplement,$_GET)?>
-					<?php echo $supplement?> - <?php echo $prix?> $
-				</label>
-			</div>
-		<?php endforeach?></br>
+		<div class="form-grop">
+			<?php foreach ($supplements as $supplement => $prix):?>
+				<div class="checkbox">
+					<label>
+						<?=checkbox("supplement",$supplement,$_GET)?>
+						<?php echo $supplement?> - <?php echo $prix?> $
+					</label>
+				</div>
+			<?php endforeach?></br>
+		</div>
 
 		<button type="submit" class="btn btn-primary">Valider ma glace</button>
 	</form></br>

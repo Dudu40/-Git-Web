@@ -26,7 +26,7 @@ function nav_menu():string{
           <?php if(isset($title)):?>
             <?php echo($title) ?>
           <?php else:?>
-            <?php Titre?>
+            Titre
           <?php endif ?>
         </title>
 
