@@ -1,7 +1,7 @@
 <?php
 // le but est de renvoyer la bonne balise html à afficher
 
-// fonction nav_item
+// fonction nav_item -> un li du menu 
 function nav_item(string $link,string $name):string{
   $class='nav-link';
   if($_SERVER['SCRIPT_NAME']==$link){
@@ -11,6 +11,7 @@ function nav_item(string $link,string $name):string{
   return $html;  
 }
 
+// cree menu d'item
 function nav_menu():string{
   return nav_item('/index.php','Acceuil').
          nav_item('/contact.php','Contact');
